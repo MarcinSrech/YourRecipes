@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Loading View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoadingViewController" customModule="YourRecipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="UHz-uW-csC" kind="showDetail" identifier="fromLoadingToList" action="showViewController:sender:" id="8qg-84-3Zs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--List View Controller-->
+        <scene sceneID="UAa-Uv-8Gs">
+            <objects>
+                <viewController id="TJ3-jc-NcP" customClass="ListViewController" customModule="YourRecipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="08v-Ir-jzk"/>
+                    <connections>
+                        <segue destination="trf-C0-ULv" kind="show" identifier="fromListToDetails" id="4yT-Gz-VFZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9c8-3s-hhp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1658" y="136"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="V3M-VT-h6y">
+            <objects>
+                <viewController id="trf-C0-ULv" customClass="DetailsViewController" customModule="YourRecipes" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DVs-BM-gjj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2571" y="133"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Q9u-oL-lle">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UHz-uW-csC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nu4-m6-ZkO">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TJ3-jc-NcP" kind="relationship" relationship="rootViewController" id="27i-zc-mKu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ecd-uM-W0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="907.5" y="138.38028169014083"/>
+        </scene>
+    </scenes>
+</document>
