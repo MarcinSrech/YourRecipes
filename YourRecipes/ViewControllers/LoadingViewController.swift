@@ -9,27 +9,75 @@
 import UIKit
 
 class LoadingViewController: UIViewController {
+    
+    //MARK: - Outlets
+    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var informationLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var retryButton: UIButton!
+    
+    //MARK: - Identifiers
+    let segueToList = "fromLoadingToList"
 
+    //MARK: - Properties
+
+    
+    //MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setColorsForUI()
+        setTextForUI()
+        setImage()
+        setAppearance(for: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        fetchData()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //MARK: - Prepare UI
+    func setColorsForUI() {
+        view.backgroundColor = UIColor.getColor(for: .background)
+        informationLabel.textColor = UIColor.getColor(for: .fontWhite)
+        retryButton.tintColor = UIColor.getColor(for: .fontWhite)
+        authorLabel.textColor = UIColor.getColor(for: .fontWhite)
+    }
+    
+    func setTextForUI() {
+        informationLabel.text = "LoadingVC_FetchingData".localized()
+        retryButton.setTitle("LoadingVC_RetryButton".localized(), for: .normal)
+        authorLabel.text = "LoadingVC_Author".localized()
+    }
+    
+    func setImage() {
+        let image = UIImage(named: "RecipeLogo")
+        photoImageView.image = image
+    }
+    
+    func setAppearance(for isDownload: Bool) {
+        retryButton.isHidden = isDownload
+        informationLabel.isHidden = !isDownload
+        activityIndicatorView.isHidden = !isDownload
+        
+        if isDownload {
+            activityIndicatorView.startAnimating()
+        } else {
+            activityIndicatorView.stopAnimating()
+        }
+    }
+    
+    
+    //MARK: - Fetching data
+    func fetchData() {
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //MARK: - Actions
+    @IBAction func tappedRetryButton(_ sender: Any) {
     }
-    */
-
 }
