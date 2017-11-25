@@ -9,8 +9,9 @@
 
 import Foundation
 import CoreData
+import MagicalRecord
 
 @objc(CDRecipe)
 public class CDRecipe: NSManagedObject {
-
+ 
 }

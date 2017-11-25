@@ -10,6 +10,9 @@
 		088218CAB08C330F6FC98849 /* Pods_YourRecipesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B96EE3F287AA1BB4969779 /* Pods_YourRecipesTests.framework */; };
 		20C9472A9DD1018453A08C33 /* Pods_YourRecipesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7461BF7A9D745A764DAB33 /* Pods_YourRecipesUITests.framework */; };
 		3AE371A5FD23477167CA4B03 /* Pods_YourRecipes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C79EDEA6116945C6DA40B96B /* Pods_YourRecipes.framework */; };
+		515FF73B1FC9C1DC002D0DAC /* RecipeRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515FF73A1FC9C1DC002D0DAC /* RecipeRequests.swift */; };
+		515FF73E1FC9C404002D0DAC /* RecipesParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515FF73D1FC9C404002D0DAC /* RecipesParameters.swift */; };
+		515FF7401FC9C927002D0DAC /* RecipesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515FF73F1FC9C927002D0DAC /* RecipesOperation.swift */; };
 		5198BD781FC98C1700DF21E5 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198BD771FC98C1700DF21E5 /* Environment.swift */; };
 		5198BD7A1FC98C3E00DF21E5 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198BD791FC98C3E00DF21E5 /* NetworkDispatcher.swift */; };
 		519F5E0C1FC944440076B02D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F5E0B1FC944440076B02D /* AppDelegate.swift */; };
@@ -58,6 +61,10 @@
 
 /* Begin PBXFileReference section */
 		2FE76D6C96AB5B6B59F96929 /* Pods-YourRecipesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourRecipesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YourRecipesTests/Pods-YourRecipesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		515FF73A1FC9C1DC002D0DAC /* RecipeRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRequests.swift; sourceTree = "<group>"; };
+		515FF73D1FC9C404002D0DAC /* RecipesParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesParameters.swift; sourceTree = "<group>"; };
+		515FF73F1FC9C927002D0DAC /* RecipesOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesOperation.swift; sourceTree = "<group>"; };
+		5193CB8D1FC9D7E300A79D63 /* YourRecipes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YourRecipes-Bridging-Header.h"; sourceTree = "<group>"; };
 		5198BD771FC98C1700DF21E5 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		5198BD791FC98C3E00DF21E5 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
 		519F5E081FC944440076B02D /* YourRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,9 +149,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		515FF73C1FC9C395002D0DAC /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				519F5E5D1FC952020076B02D /* UIColor+AppColors.swift */,
+				519F5E5F1FC9579F0076B02D /* String+Localize.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		5198BD751FC98B7B00DF21E5 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				515FF73A1FC9C1DC002D0DAC /* RecipeRequests.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -152,6 +169,7 @@
 		5198BD761FC98B8F00DF21E5 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
+				515FF73F1FC9C927002D0DAC /* RecipesOperation.swift */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -211,9 +229,9 @@
 			isa = PBXGroup;
 			children = (
 				519F5E471FC944F50076B02D /* Networking */,
+				515FF73C1FC9C395002D0DAC /* Category */,
 				519F5E461FC944EA0076B02D /* CoreData */,
-				519F5E5D1FC952020076B02D /* UIColor+AppColors.swift */,
-				519F5E5F1FC9579F0076B02D /* String+Localize.swift */,
+				515FF73D1FC9C404002D0DAC /* RecipesParameters.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -255,6 +273,7 @@
 				519F5E1A1FC944440076B02D /* Info.plist */,
 				519F5E401FC944900076B02D /* Localizable.strings */,
 				519F5E0B1FC944440076B02D /* AppDelegate.swift */,
+				5193CB8D1FC9D7E300A79D63 /* YourRecipes-Bridging-Header.h */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -374,6 +393,7 @@
 				TargetAttributes = {
 					519F5E071FC944440076B02D = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					519F5E1E1FC944440076B02D = {
@@ -601,11 +621,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				51A218621FC97C9500428D3C /* APIManager.swift in Sources */,
+				515FF73E1FC9C404002D0DAC /* RecipesParameters.swift in Sources */,
 				519F5E141FC944440076B02D /* YourRecipes.xcdatamodeld in Sources */,
 				519F5E5E1FC952020076B02D /* UIColor+AppColors.swift in Sources */,
 				519F5E0C1FC944440076B02D /* AppDelegate.swift in Sources */,
 				51A218661FC97CE000428D3C /* Dispatcher.swift in Sources */,
+				515FF7401FC9C927002D0DAC /* RecipesOperation.swift in Sources */,
 				519F5E5C1FC950980076B02D /* CDIngredient+CoreDataProperties.swift in Sources */,
+				515FF73B1FC9C1DC002D0DAC /* RecipeRequests.swift in Sources */,
 				519F5E4F1FC945710076B02D /* ListViewController.swift in Sources */,
 				51A218681FC97D0000428D3C /* Request.swift in Sources */,
 				51A218641FC97CAC00428D3C /* Response.swift in Sources */,
@@ -792,11 +815,14 @@
 			baseConfigurationReference = DC504044848B35E0C13F62C4 /* Pods-YourRecipes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/YourRecipes/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wicin.YourRecipes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YourRecipes/SupportingFiles/YourRecipes-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -807,11 +833,13 @@
 			baseConfigurationReference = C5923006D8CB6360D118504A /* Pods-YourRecipes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/YourRecipes/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wicin.YourRecipes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YourRecipes/SupportingFiles/YourRecipes-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

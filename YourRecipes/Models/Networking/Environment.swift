@@ -11,7 +11,7 @@ import Foundation
 struct Environment {
     var name: String
     var host: String
-    var headers: [String: Any] = [:]
-    var cachePolicy: URLRequest.CachePolicy = .reloadIgnoringLocalAndRemoteCacheData
+    var headers: [String: Any]
+    var cachePolicy: URLRequest.CachePolicy
 
 }

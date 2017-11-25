@@ -15,7 +15,7 @@ enum Response {
     case error(_: Int?, _: Error?)
     
     init(_ response: (r: HTTPURLResponse?, data: Data?, error: Error?), for request: Request) {
-        guard response.r?.statusCode == 200, response.r?.statusCode == 201,
+        guard response.r?.statusCode == 200 || response.r?.statusCode == 201 ||
             response.r?.statusCode == 204, response.error == nil else {
                 self = .error(response.r?.statusCode, response.error)
                 return
