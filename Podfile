@@ -7,6 +7,8 @@ target 'YourRecipes' do
 
   pod 'MagicalRecord'
   pod 'SDWebImage', '~> 4.0'
+  pod 'HydraAsync'
+  pod 'SwiftyJSON'
   
   target 'YourRecipesTests' do
     inherit! :search_paths

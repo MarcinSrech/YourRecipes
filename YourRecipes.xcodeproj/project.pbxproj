@@ -10,6 +10,8 @@
 		088218CAB08C330F6FC98849 /* Pods_YourRecipesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B96EE3F287AA1BB4969779 /* Pods_YourRecipesTests.framework */; };
 		20C9472A9DD1018453A08C33 /* Pods_YourRecipesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7461BF7A9D745A764DAB33 /* Pods_YourRecipesUITests.framework */; };
 		3AE371A5FD23477167CA4B03 /* Pods_YourRecipes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C79EDEA6116945C6DA40B96B /* Pods_YourRecipes.framework */; };
+		5198BD781FC98C1700DF21E5 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198BD771FC98C1700DF21E5 /* Environment.swift */; };
+		5198BD7A1FC98C3E00DF21E5 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198BD791FC98C3E00DF21E5 /* NetworkDispatcher.swift */; };
 		519F5E0C1FC944440076B02D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F5E0B1FC944440076B02D /* AppDelegate.swift */; };
 		519F5E111FC944440076B02D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 519F5E0F1FC944440076B02D /* Main.storyboard */; };
 		519F5E141FC944440076B02D /* YourRecipes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 519F5E121FC944440076B02D /* YourRecipes.xcdatamodeld */; };
@@ -30,6 +32,11 @@
 		519F5E5C1FC950980076B02D /* CDIngredient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F5E581FC950980076B02D /* CDIngredient+CoreDataProperties.swift */; };
 		519F5E5E1FC952020076B02D /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F5E5D1FC952020076B02D /* UIColor+AppColors.swift */; };
 		519F5E601FC9579F0076B02D /* String+Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F5E5F1FC9579F0076B02D /* String+Localize.swift */; };
+		51A218621FC97C9500428D3C /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A218611FC97C9500428D3C /* APIManager.swift */; };
+		51A218641FC97CAC00428D3C /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A218631FC97CAC00428D3C /* Response.swift */; };
+		51A218661FC97CE000428D3C /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A218651FC97CE000428D3C /* Dispatcher.swift */; };
+		51A218681FC97D0000428D3C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A218671FC97D0000428D3C /* Request.swift */; };
+		51A2186A1FC97D1D00428D3C /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A218691FC97D1D00428D3C /* Operation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,8 @@
 
 /* Begin PBXFileReference section */
 		2FE76D6C96AB5B6B59F96929 /* Pods-YourRecipesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourRecipesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YourRecipesTests/Pods-YourRecipesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5198BD771FC98C1700DF21E5 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		5198BD791FC98C3E00DF21E5 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
 		519F5E081FC944440076B02D /* YourRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		519F5E0B1FC944440076B02D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		519F5E101FC944440076B02D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,6 +86,11 @@
 		519F5E581FC950980076B02D /* CDIngredient+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDIngredient+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		519F5E5D1FC952020076B02D /* UIColor+AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
 		519F5E5F1FC9579F0076B02D /* String+Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localize.swift"; sourceTree = "<group>"; };
+		51A218611FC97C9500428D3C /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		51A218631FC97CAC00428D3C /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		51A218651FC97CE000428D3C /* Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
+		51A218671FC97D0000428D3C /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		51A218691FC97D1D00428D3C /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
 		56E66116F6E46393E0E1EF22 /* Pods-YourRecipesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourRecipesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YourRecipesUITests/Pods-YourRecipesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		74B96EE3F287AA1BB4969779 /* Pods_YourRecipesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YourRecipesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7461BF7A9D745A764DAB33 /* Pods_YourRecipesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YourRecipesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +140,20 @@
 				D3B1A862753324E70BE1142D /* Pods-YourRecipesUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		5198BD751FC98B7B00DF21E5 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		5198BD761FC98B8F00DF21E5 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Operations;
 			sourceTree = "<group>";
 		};
 		519F5DFF1FC944440076B02D = {
@@ -246,6 +274,15 @@
 		519F5E471FC944F50076B02D /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				51A218611FC97C9500428D3C /* APIManager.swift */,
+				5198BD771FC98C1700DF21E5 /* Environment.swift */,
+				5198BD791FC98C3E00DF21E5 /* NetworkDispatcher.swift */,
+				51A218651FC97CE000428D3C /* Dispatcher.swift */,
+				51A218671FC97D0000428D3C /* Request.swift */,
+				51A218631FC97CAC00428D3C /* Response.swift */,
+				51A218691FC97D1D00428D3C /* Operation.swift */,
+				5198BD751FC98B7B00DF21E5 /* Requests */,
+				5198BD761FC98B8F00DF21E5 /* Operations */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -539,13 +576,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-YourRecipes/Pods-YourRecipes-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HydraAsync/Hydra.framework",
 				"${BUILT_PRODUCTS_DIR}/MagicalRecord/MagicalRecord.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hydra.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MagicalRecord.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -559,17 +600,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51A218621FC97C9500428D3C /* APIManager.swift in Sources */,
 				519F5E141FC944440076B02D /* YourRecipes.xcdatamodeld in Sources */,
 				519F5E5E1FC952020076B02D /* UIColor+AppColors.swift in Sources */,
 				519F5E0C1FC944440076B02D /* AppDelegate.swift in Sources */,
+				51A218661FC97CE000428D3C /* Dispatcher.swift in Sources */,
 				519F5E5C1FC950980076B02D /* CDIngredient+CoreDataProperties.swift in Sources */,
 				519F5E4F1FC945710076B02D /* ListViewController.swift in Sources */,
+				51A218681FC97D0000428D3C /* Request.swift in Sources */,
+				51A218641FC97CAC00428D3C /* Response.swift in Sources */,
 				519F5E601FC9579F0076B02D /* String+Localize.swift in Sources */,
 				519F5E4B1FC945600076B02D /* LoadingViewController.swift in Sources */,
+				51A2186A1FC97D1D00428D3C /* Operation.swift in Sources */,
 				519F5E591FC950980076B02D /* CDRecipe+CoreDataClass.swift in Sources */,
 				519F5E5A1FC950980076B02D /* CDRecipe+CoreDataProperties.swift in Sources */,
 				519F5E5B1FC950980076B02D /* CDIngredient+CoreDataClass.swift in Sources */,
+				5198BD7A1FC98C3E00DF21E5 /* NetworkDispatcher.swift in Sources */,
 				519F5E531FC945820076B02D /* DetailsViewController.swift in Sources */,
+				5198BD781FC98C1700DF21E5 /* Environment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
