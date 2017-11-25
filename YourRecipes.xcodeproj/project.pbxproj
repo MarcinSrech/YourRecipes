@@ -28,6 +28,8 @@
 		519F5E5A1FC950980076B02D /* CDRecipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F5E561FC950980076B02D /* CDRecipe+CoreDataProperties.swift */; };
 		519F5E5B1FC950980076B02D /* CDIngredient+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F5E571FC950980076B02D /* CDIngredient+CoreDataClass.swift */; };
 		519F5E5C1FC950980076B02D /* CDIngredient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F5E581FC950980076B02D /* CDIngredient+CoreDataProperties.swift */; };
+		519F5E5E1FC952020076B02D /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F5E5D1FC952020076B02D /* UIColor+AppColors.swift */; };
+		519F5E601FC9579F0076B02D /* String+Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F5E5F1FC9579F0076B02D /* String+Localize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		519F5E561FC950980076B02D /* CDRecipe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDRecipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		519F5E571FC950980076B02D /* CDIngredient+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDIngredient+CoreDataClass.swift"; sourceTree = "<group>"; };
 		519F5E581FC950980076B02D /* CDIngredient+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDIngredient+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		519F5E5D1FC952020076B02D /* UIColor+AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
+		519F5E5F1FC9579F0076B02D /* String+Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localize.swift"; sourceTree = "<group>"; };
 		56E66116F6E46393E0E1EF22 /* Pods-YourRecipesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourRecipesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YourRecipesUITests/Pods-YourRecipesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		74B96EE3F287AA1BB4969779 /* Pods_YourRecipesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YourRecipesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7461BF7A9D745A764DAB33 /* Pods_YourRecipesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YourRecipesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +184,8 @@
 			children = (
 				519F5E471FC944F50076B02D /* Networking */,
 				519F5E461FC944EA0076B02D /* CoreData */,
+				519F5E5D1FC952020076B02D /* UIColor+AppColors.swift */,
+				519F5E5F1FC9579F0076B02D /* String+Localize.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -554,9 +560,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				519F5E141FC944440076B02D /* YourRecipes.xcdatamodeld in Sources */,
+				519F5E5E1FC952020076B02D /* UIColor+AppColors.swift in Sources */,
 				519F5E0C1FC944440076B02D /* AppDelegate.swift in Sources */,
 				519F5E5C1FC950980076B02D /* CDIngredient+CoreDataProperties.swift in Sources */,
 				519F5E4F1FC945710076B02D /* ListViewController.swift in Sources */,
+				519F5E601FC9579F0076B02D /* String+Localize.swift in Sources */,
 				519F5E4B1FC945600076B02D /* LoadingViewController.swift in Sources */,
 				519F5E591FC950980076B02D /* CDRecipe+CoreDataClass.swift in Sources */,
 				519F5E5A1FC950980076B02D /* CDRecipe+CoreDataProperties.swift in Sources */,
@@ -737,7 +745,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = YourRecipes/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/YourRecipes/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wicin.YourRecipes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -752,7 +760,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = YourRecipes/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/YourRecipes/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wicin.YourRecipes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
