@@ -14,4 +14,15 @@ import MagicalRecord
 @objc(CDRecipe)
 public class CDRecipe: NSManagedObject {
  
+    func correctFormatImageUrl() -> URL? {
+        if let imageURL = self.imageUrl {
+            let components = imageURL.components(separatedBy: "\"")
+            if let urlString = components.filter({ $0.contains("http") }).first {
+                if let url = URL(string: urlString) {
+                    return url
+                }
+            }
+        }
+        return nil
+    }
 }

@@ -9,3 +9,7 @@
 "LoadingVC_Author" = "Author: Marcin Srech";
 "LoadingVC_RetryButton" = "Retry";
 "LoadingVC_FetchingData" = "Fetching data";
+
+"ListVC_Title" = "Recipes";
+
+"DetailsVC_TitleHeaderSectionIngredietns" = "Ingredients";

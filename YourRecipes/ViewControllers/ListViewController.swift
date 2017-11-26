@@ -32,7 +32,15 @@ class ListViewController: UIViewController {
         allRecipes = fetchData()
         prepareTableView()
         searchBar.delegate = self
-        title = "Test"
+        title = "ListVC_Title".localized()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
     }
 
    
@@ -49,34 +57,24 @@ class ListViewController: UIViewController {
     
     //MARK: - Fetch Data
     func fetchData() -> [CDRecipe] {
-        var recipes = CDRecipe.mr_findAllSorted(by: "title", ascending: true) as! [CDRecipe]
-        
-//        let context = NSManagedObjectContext.mr_()
-//        let recipe1 = CDRecipe.mr_createEntity()
-//        recipe1?.title = "Recipe 1"
-//        recipe1?.desc = "Desc 1 long text test one two three four five six seven nine ten elevem twelve"
-//        let ingredient1 = CDIngredient.mr_createEntity()
-//        ingredient1?.name = "Ingredient 1"
-//        recipe1?.addToIngredients(ingredient1!)
-//        
-//        let recipe2 = CDRecipe.mr_createEntity()
-//        recipe2?.title = "Recipe 2"
-//        recipe2?.desc = "Desc 2"
-//        let ingredient2 = CDIngredient.mr_createEntity()
-//        ingredient2?.name = "Ingredient 2"
-//        recipe2?.addToIngredients(ingredient2!)
-//     //   context.mr_saveToPersistentStoreAndWait()
-//        
-//        
-//        recipes = [recipe1!, recipe2!]
-        
-        
+        let recipes = CDRecipe.mr_findAllSorted(by: "title", ascending: true) as! [CDRecipe]
+
         return recipes
     }
     
-    
-
-    
+    //MARK: - Segues
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueToDetails {
+            let destVC = segue.destination as! DetailsViewController
+            if let indexPath = tableView.indexPathForSelectedRow {
+                if isFiltering {
+                    destVC.cdRecipe = filteredRecipes[indexPath.row]
+                } else {
+                    destVC.cdRecipe = allRecipes[indexPath.row]
+                }
+            }
+        }
+    }
 }
 
 //MARK: UITableViewDelegate, DataSource
@@ -102,10 +100,10 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.titleLabel.text = cdRecipe.title
         cell.descriptionLabel.text = cdRecipe.desc
         
-        if let imageURL = cdRecipe.imageUrl {
+        if let url = cdRecipe.correctFormatImageUrl() {
             cell.photoImageView.sd_setShowActivityIndicatorView(true)
             cell.photoImageView.sd_setIndicatorStyle(.gray)
-            cell.photoImageView.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "RecipeLogo"), options: [], completed: nil)
+            cell.photoImageView.sd_setImage(with: url, placeholderImage: UIImage(named: "RecipeLogo"), options: [], completed: nil)
         } else {
             cell.photoImageView.image = UIImage(named: "RecipeLogo")
         }

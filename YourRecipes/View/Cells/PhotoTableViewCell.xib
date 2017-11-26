@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="143" id="KGk-i7-Jjw" customClass="PhotoTableViewCell" customModule="YourRecipes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="152" height="143"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="152" height="142.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7eY-az-oC7">
+                        <rect key="frame" x="15" y="10" width="122.5" height="122.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="NI0-C2-QzW"/>
+                            <constraint firstAttribute="width" secondItem="7eY-az-oC7" secondAttribute="height" multiplier="1:1" id="pYU-nN-fXG"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="7eY-az-oC7" secondAttribute="bottom" priority="750" constant="12.5" id="1i3-cA-Yv8"/>
+                    <constraint firstItem="7eY-az-oC7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" priority="750" constant="16" id="Gg1-2Z-Xhe"/>
+                    <constraint firstItem="7eY-az-oC7" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="HUu-te-5Tc"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7eY-az-oC7" secondAttribute="trailing" priority="750" constant="16" id="ZTa-18-0sS"/>
+                    <constraint firstItem="7eY-az-oC7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="dz0-5d-t6W"/>
+                    <constraint firstItem="7eY-az-oC7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="fpa-n5-ppf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="photoImageView" destination="7eY-az-oC7" id="rDu-02-Ghc"/>
+            </connections>
+            <point key="canvasLocation" x="-44" y="178.5"/>
+        </tableViewCell>
+    </objects>
+</document>
