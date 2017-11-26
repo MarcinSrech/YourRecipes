@@ -77,12 +77,25 @@ class LoadingViewController: UIViewController {
         APIManager.shared.fetchRecipes(parameters: parameters).then { [unowned self](_) in
             self.performSegue(withIdentifier: self.segueToList, sender: self)
          }.catch { (error) in
-                print("error")
+            let alert = UIAlertController(title: "Global_AlertTitle".localized(), message: "Global_AlertyBody".localized(), preferredStyle: UIAlertControllerStyle.alert)
+            let okAction = UIAlertAction(title: "Global_OK".localized(), style: UIAlertActionStyle.default, handler: { (action) in
+                self.performSegue(withIdentifier: self.segueToList, sender: self)
+            })
+            let cancelAction = UIAlertAction(title: "Global_Cancel".localized(), style: UIAlertActionStyle.cancel, handler: { (action) in
+                self.setAppearance(for: false)
+            })
+            
+            alert.addAction(okAction)
+            alert.addAction(cancelAction)
+            self.present(alert, animated: true, completion: nil)
         }
     }
-    
+
 
     //MARK: - Actions
     @IBAction func tappedRetryButton(_ sender: Any) {
+        setAppearance(for: true)
+        fetchData()
+        
     }
 }

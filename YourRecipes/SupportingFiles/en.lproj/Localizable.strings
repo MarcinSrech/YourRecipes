@@ -6,6 +6,11 @@
   Copyright © 2017 Marcin Srech. All rights reserved.
 */
 
+"Global_AlertTitle" = "Ups";
+"Global_AlertyBody" = "Something went wrong, but you can use app offline";
+"Global_OK" = "Ok";
+"Global_Cancel" = "Cancel";
+
 "LoadingVC_Author" = "Author: Marcin Srech";
 "LoadingVC_RetryButton" = "Retry";
 "LoadingVC_FetchingData" = "Fetching data";
