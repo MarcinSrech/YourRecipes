@@ -13,26 +13,32 @@ import MagicalRecord
 
 @objc(CDIngredient)
 public class CDIngredient: NSManagedObject {
-
- 
     
-    public override func willImport(_ data: Any) {
-        let dictionary = data as? [String: Any]
-        if let ingredients = dictionary?["elements"] as? [[String: Any]] {
-            for ingredient in ingredients {
-                var cdIngredient = CDIngredient.mr_findFirst(byAttribute: "externalId", withValue: ingredient["id"]!, in: managedObjectContext!)
-                if cdIngredient == nil {
-                    cdIngredient = CDIngredient.mr_createEntity(in: managedObjectContext!)
+    
+    class public func importIngredients(_ data: Any, context: NSManagedObjectContext, relationTo: CDRecipe?) {
+        let dictionary = data as? [[String: Any]]
+        for box in dictionary! {
+            if let ingredients = box["elements"] as? [[String: Any]] {
+                for ingredient in ingredients {
+                    var cdIngredient = CDIngredient.mr_findFirst(byAttribute: "externalId", withValue: ingredient["id"]!, in: context)
+                    if cdIngredient == nil {
+                        cdIngredient = CDIngredient.mr_createEntity(in: context)
+                        relationTo?.addToIngredients(cdIngredient!)
+                        if !(ingredient["id"] is NSNull) {
+                            cdIngredient?.externalId =  (ingredient["id"] as! NSNumber).int32Value
+                        }
+                    }
+                    
+                    if !(ingredient["amount"] is NSNull) {
+                        cdIngredient?.amount =  (ingredient["amount"] as! NSNumber).int32Value
+                    }
+                    cdIngredient?.name = ingredient["name"] as? String
+                    cdIngredient?.symbol = ingredient["symbol"] as? String
                 }
-                
-                if !(ingredient["amount"] is NSNull) {
-                    cdIngredient?.amount =  (ingredient["amount"] as! NSNumber).int32Value
-                }
-                cdIngredient?.name = ingredient["name"] as? String
-                cdIngredient?.symbol = ingredient["symbol"] as? String
             }
         }
-        managedObjectContext?.mr_saveOnlySelfAndWait()
     }
+    
+    
 
 }

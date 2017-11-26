@@ -82,7 +82,7 @@ class DetailsViewController: UIViewController {
         case .ingredients:
             guard ((cdRecipe?.ingredients) != nil) else { return cellModelsToReturn }
             for cdIngredient in (cdRecipe?.ingredients)! {
-                if let ingredient = cdIngredient as? CDIngredient {
+                if let ingredient = cdIngredient as? CDIngredient, ingredient.name != "" {
                     let model = CellModel()
                     model.entryValue = ingredient.name
                     cellModelsToReturn.append(model)

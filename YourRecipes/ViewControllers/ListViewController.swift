@@ -64,6 +64,7 @@ class ListViewController: UIViewController {
     
     //MARK: - Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        view.endEditing(true)
         if segue.identifier == segueToDetails {
             let destVC = segue.destination as! DetailsViewController
             if let indexPath = tableView.indexPathForSelectedRow {
