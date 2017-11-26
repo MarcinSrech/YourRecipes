@@ -2,11 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="17B48" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CDIngredient" representedClassName="CDIngredient" syncable="YES">
         <attribute name="amount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="externalId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES">
-            <userInfo>
-                <entry key="mappedKeyName" value="id"/>
-            </userInfo>
-        </attribute>
+        <attribute name="externalId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="symbol" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="recipe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDRecipe" inverseName="ingredients" inverseEntity="CDRecipe" syncable="YES"/>
@@ -41,7 +37,7 @@
         </userInfo>
     </entity>
     <elements>
-        <element name="CDIngredient" positionX="-54" positionY="-12" width="128" height="118"/>
+        <element name="CDIngredient" positionX="-54" positionY="-12" width="128" height="120"/>
         <element name="CDRecipe" positionX="-468" positionY="-18" width="128" height="118"/>
     </elements>
 </model>

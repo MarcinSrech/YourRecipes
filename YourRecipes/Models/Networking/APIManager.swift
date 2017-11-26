@@ -36,6 +36,8 @@ class APIManager {
                 }
                 
                 let context = NSManagedObjectContext.mr_()
+                CDRecipe.mr_truncateAll(in: context)
+                CDIngredient.mr_truncateAll(in: context)
                 _ = CDRecipe.mr_import(from: array, in: context)
                 context.mr_saveToPersistentStoreAndWait()
                 resolve(Void())
