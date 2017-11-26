@@ -10,6 +10,8 @@
 		088218CAB08C330F6FC98849 /* Pods_YourRecipesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B96EE3F287AA1BB4969779 /* Pods_YourRecipesTests.framework */; };
 		20C9472A9DD1018453A08C33 /* Pods_YourRecipesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7461BF7A9D745A764DAB33 /* Pods_YourRecipesUITests.framework */; };
 		3AE371A5FD23477167CA4B03 /* Pods_YourRecipes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C79EDEA6116945C6DA40B96B /* Pods_YourRecipes.framework */; };
+		51500CB31FCA2BFF0075C5A8 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51500CB11FCA2BFF0075C5A8 /* ListTableViewCell.swift */; };
+		51500CB41FCA2BFF0075C5A8 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51500CB21FCA2BFF0075C5A8 /* ListTableViewCell.xib */; };
 		515FF73B1FC9C1DC002D0DAC /* RecipeRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515FF73A1FC9C1DC002D0DAC /* RecipeRequests.swift */; };
 		515FF73E1FC9C404002D0DAC /* RecipesParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515FF73D1FC9C404002D0DAC /* RecipesParameters.swift */; };
 		515FF7401FC9C927002D0DAC /* RecipesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515FF73F1FC9C927002D0DAC /* RecipesOperation.swift */; };
@@ -61,6 +63,8 @@
 
 /* Begin PBXFileReference section */
 		2FE76D6C96AB5B6B59F96929 /* Pods-YourRecipesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourRecipesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YourRecipesTests/Pods-YourRecipesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		51500CB11FCA2BFF0075C5A8 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		51500CB21FCA2BFF0075C5A8 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		515FF73A1FC9C1DC002D0DAC /* RecipeRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRequests.swift; sourceTree = "<group>"; };
 		515FF73D1FC9C404002D0DAC /* RecipesParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesParameters.swift; sourceTree = "<group>"; };
 		515FF73F1FC9C927002D0DAC /* RecipesOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesOperation.swift; sourceTree = "<group>"; };
@@ -260,6 +264,8 @@
 		519F5E441FC944C50076B02D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				51500CB11FCA2BFF0075C5A8 /* ListTableViewCell.swift */,
+				51500CB21FCA2BFF0075C5A8 /* ListTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -438,6 +444,7 @@
 				519F5E3E1FC944900076B02D /* Localizable.strings in Resources */,
 				519F5E501FC945710076B02D /* ListViewController.xib in Resources */,
 				519F5E161FC944440076B02D /* Assets.xcassets in Resources */,
+				51500CB41FCA2BFF0075C5A8 /* ListTableViewCell.xib in Resources */,
 				519F5E4C1FC945600076B02D /* LoadingViewController.xib in Resources */,
 				519F5E111FC944440076B02D /* Main.storyboard in Resources */,
 			);
@@ -631,6 +638,7 @@
 				515FF73B1FC9C1DC002D0DAC /* RecipeRequests.swift in Sources */,
 				519F5E4F1FC945710076B02D /* ListViewController.swift in Sources */,
 				51A218681FC97D0000428D3C /* Request.swift in Sources */,
+				51500CB31FCA2BFF0075C5A8 /* ListTableViewCell.swift in Sources */,
 				51A218641FC97CAC00428D3C /* Response.swift in Sources */,
 				519F5E601FC9579F0076B02D /* String+Localize.swift in Sources */,
 				519F5E4B1FC945600076B02D /* LoadingViewController.swift in Sources */,

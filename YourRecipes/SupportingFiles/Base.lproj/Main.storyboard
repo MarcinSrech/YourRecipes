@@ -24,6 +24,7 @@
         <scene sceneID="UAa-Uv-8Gs">
             <objects>
                 <viewController id="TJ3-jc-NcP" customClass="ListViewController" customModule="YourRecipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="08v-Ir-jzk"/>
                     <connections>
                         <segue destination="trf-C0-ULv" kind="show" identifier="fromListToDetails" id="4yT-Gz-VFZ"/>

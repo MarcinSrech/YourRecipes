@@ -74,9 +74,9 @@ class LoadingViewController: UIViewController {
     //MARK: - Fetching data
     func fetchData() {
         let parameters = RecipeParameters(tags: "", size: "thumbnail-medium", ratio: 1, limit: 50, from: 0)
-        APIManager.shared.fetchRecipes(parameters: parameters).then { (_) in
-            print("sukces")
-            }.catch { (error) in
+        APIManager.shared.fetchRecipes(parameters: parameters).then { [unowned self](_) in
+            self.performSegue(withIdentifier: self.segueToList, sender: self)
+         }.catch { (error) in
                 print("error")
         }
     }
